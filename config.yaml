@@ -1,0 +1,40 @@
+data:
+  raw_path: data/BTSsilom_condo.xlsx
+  processed_path: data/processed/condo_processed.csv
+  target: rental
+
+project:
+  min_project_frequency: 15
+
+columns:
+  selected:
+    - poster_status
+    - rental
+    - no_bedroom
+    - floor
+    - room_size
+    - unit_type
+    - project_name
+
+  amenities:
+    - air_conditioner
+    - digital_door_lock
+    - furnished
+    - hot_tub
+    - in_room_wifi
+    - kitchen_hood
+    - kitchen_stove
+    - phone
+    - refrigerator
+    - tv
+    - washer
+    - water_heater
+
+model:
+  test_size: 0.2
+  random_state: 42
+  artifact_path: artifacts/models/best_model.joblib
+  metrics_path: artifacts/reports/metrics.json
+
+features:
+  artifact_path: artifacts/features/feature_columns.joblib
