@@ -142,7 +142,7 @@ def processed_data(df: pd.DataFrame, config: dict) -> pd.DataFrame:
     df = clean_no_bedroom(df)
     df["no_bedroom"] = df["no_bedroom"].fillna(0)
 
-    data = data.drop_duplicates()
+    df = df.drop_duplicates()
 
 
     available_amenities = [col for col in amenity_columns if col in df.columns]

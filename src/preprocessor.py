@@ -72,8 +72,8 @@ def create_preprocessor(numeric_features, categorical_features):
             (
                 "cat",
                 OneHotEncoder(
-                    handle_unknown="ignore",
-                    sparse_output=False,
+                    handle_unknown="infrequent_if_exist", 
+                    min_frequency=10
                 ),
                 categorical_features,
             ),

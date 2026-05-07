@@ -3,13 +3,14 @@ import numpy as np
 
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split
+from sklearn.compose import TransformedTargetRegressor
 
 from utils import get_project_root, save_json
 from config import load_config
 from data import load_data
 from models import get_models
 from preprocessor import *
-from evaluate import evaluate_model
+from evaluate import evaluate_model, get_feature_importance
 
 def train() -> None:
 
@@ -70,6 +71,12 @@ def train() -> None:
             ]
         )
 
+        pipeline = TransformedTargetRegressor(
+            regressor=pipeline,
+            func=np.log1p,
+            inverse_func=np.expm1
+        )
+
         pipeline.fit(X_train, y_train)
 
         y_pred = pipeline.predict(X_test)
@@ -91,6 +98,8 @@ def train() -> None:
     if best_model is None:
         raise RuntimeError("No model was trained successfully.")
     
+    importance = get_feature_importance(pipeline=best_model, X_test=X_test, y_test=y_test, random_state=random_state)
+    
     model_path.parent.mkdir(parents=True, exist_ok=True)
     metrics_path.parent.mkdir(parents=True, exist_ok=True)
     feature_path.parent.mkdir(parents=True, exist_ok=True)
@@ -107,8 +116,10 @@ def train() -> None:
         },
         "features": list(X.columns),
         "target": target,
+        "feature_importance": importance
     }
 
+    
     save_json(final_report, metrics_path)
 
     print("\nTraining complete.")

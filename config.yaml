@@ -1,6 +1,5 @@
 data:
   raw_path: data/BTSsilom_condo.xlsx
-  processed_path: data/processed/condo_processed.csv
   target: rental
 
 project:
@@ -33,7 +32,7 @@ columns:
 model:
   test_size: 0.2
   random_state: 42
-  artifact_path: artifacts/models/best_model.joblib
+  artifact_path: artifacts/models/model.joblib
   metrics_path: artifacts/reports/metrics.json
 
 features:

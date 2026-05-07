@@ -1,0 +1,136 @@
+{
+    "best_model": "VotingRegressor",
+    "best_r2": 0.9133900028493616,
+    "all_models": {
+        "Linear Regression": {
+            "mae": 5385.920600481925,
+            "rmse": 13278.852571355466,
+            "r2": 0.8493424941796148
+        },
+        "Ridge Regression": {
+            "mae": 5466.437973505369,
+            "rmse": 14030.833676964923,
+            "r2": 0.8317958805072639
+        },
+        "Lasso Regression": {
+            "mae": 5460.315947954076,
+            "rmse": 14005.005066348105,
+            "r2": 0.8324145864298504
+        },
+        "Decision Tree": {
+            "mae": 6511.379583188909,
+            "rmse": 20360.32043057688,
+            "r2": 0.6458078821459855
+        },
+        "Random Forest": {
+            "mae": 4637.176253157725,
+            "rmse": 11321.848845215702,
+            "r2": 0.890477239938309
+        },
+        "Gradient Boosting": {
+            "mae": 7084.889667748826,
+            "rmse": 13580.777003427276,
+            "r2": 0.8424135358111835
+        },
+        "SVR": {
+            "mae": 4851.815746722526,
+            "rmse": 10649.215293158519,
+            "r2": 0.9031042141548309
+        },
+        "KNN": {
+            "mae": 7684.833920885931,
+            "rmse": 15364.210581776631,
+            "r2": 0.7983073013454443
+        },
+        "VotingRegressor": {
+            "mae": 4516.8965108071625,
+            "rmse": 10068.138349222274,
+            "r2": 0.9133900028493616
+        }
+    },
+    "data_shape": {
+        "rows": 5771,
+        "columns": 13
+    },
+    "features": [
+        "poster_status",
+        "no_bedroom",
+        "floor",
+        "room_size",
+        "unit_type",
+        "project_name_grouped",
+        "amenity_count",
+        "kitchen_ready",
+        "move_in_ready",
+        "comfort_score",
+        "room_size_group",
+        "is_popular_project"
+    ],
+    "target": "rental",
+    "feature_importance": {
+        "method": "permutation_importance",
+        "scoring": "r2",
+        "top_features": [
+            {
+                "feature": "room_size",
+                "importance_mean": 1.0398,
+                "importance_std": 0.0324
+            },
+            {
+                "feature": "project_name_grouped",
+                "importance_mean": 0.3051,
+                "importance_std": 0.0232
+            },
+            {
+                "feature": "no_bedroom",
+                "importance_mean": 0.08,
+                "importance_std": 0.0142
+            },
+            {
+                "feature": "amenity_count",
+                "importance_mean": 0.0354,
+                "importance_std": 0.0139
+            },
+            {
+                "feature": "is_popular_project",
+                "importance_mean": 0.0281,
+                "importance_std": 0.0107
+            },
+            {
+                "feature": "room_size_group",
+                "importance_mean": 0.0248,
+                "importance_std": 0.0021
+            },
+            {
+                "feature": "move_in_ready",
+                "importance_mean": 0.0223,
+                "importance_std": 0.0134
+            },
+            {
+                "feature": "floor",
+                "importance_mean": 0.0183,
+                "importance_std": 0.0082
+            },
+            {
+                "feature": "kitchen_ready",
+                "importance_mean": 0.0179,
+                "importance_std": 0.0073
+            },
+            {
+                "feature": "unit_type",
+                "importance_mean": 0.0134,
+                "importance_std": 0.003
+            },
+            {
+                "feature": "comfort_score",
+                "importance_mean": 0.0102,
+                "importance_std": 0.0077
+            },
+            {
+                "feature": "poster_status",
+                "importance_mean": 0.0059,
+                "importance_std": 0.0044
+            }
+        ]
+    }
+}
