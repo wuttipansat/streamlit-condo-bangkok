@@ -3,7 +3,7 @@
 A streamlit web application for estimating monthly condo rental prices along the BTS Silom area in Bangkok.
 The app uses a traned machine learning model to predict rental prices from condo dataset including, unit type, room size, etc.
 
-![Image alt](https://github.com/wuttipansat/streamlit-condo-bangkok/new/main?snapshot1.png)
+![Image alt](https://github.com/wuttipansat/streamlit-condo-bangkok/blob/08f217278bc6d2f3ee83cfcf099879d828354848/snapshot1.png)
 
 ## Project Overview
 
