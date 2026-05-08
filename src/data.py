@@ -122,8 +122,8 @@ def processed_data(df: pd.DataFrame, config: dict) -> pd.DataFrame:
     df = df[(df["room_size"] >= 10) & (df["room_size"] <= 1000)]
 
 
-    df["floor"] = df["floor"].apply(clean_floor)
-    df["floor"] = df["floor"].fillna(df["floor"].median())
+    # df["floor"] = df["floor"].apply(clean_floor)
+    # df["floor"] = df["floor"].fillna(df["floor"].median())
 
 
     df = clean_project_name(df, n=min_project_freq)
@@ -139,8 +139,8 @@ def processed_data(df: pd.DataFrame, config: dict) -> pd.DataFrame:
     df["poster_status"] = df["poster_status"].fillna("No Registered")
 
 
-    df = clean_no_bedroom(df)
-    df["no_bedroom"] = df["no_bedroom"].fillna(0)
+    # df = clean_no_bedroom(df)
+    # df["no_bedroom"] = df["no_bedroom"].fillna(0)
 
     df = df.drop_duplicates()
 

@@ -20,8 +20,9 @@ def get_models(random_state: int = 42) -> dict:
         "VotingRegressor": VotingRegressor(
             estimators=[
                 ('rf', RandomForestRegressor(n_estimators=200, random_state=random_state)),
-                ('svr', SVR(C=10, epsilon=0.1, kernel='rbf'))
+                ('lasso', Lasso(alpha=0.0001, max_iter=10000)),
+                ('ridge', Ridge(alpha=1.0))
             ],
-            weights=[0.3, 0.7], n_jobs=-1
+            weights=[0.4, 0.4, 0.2], n_jobs=-1
         )
     }

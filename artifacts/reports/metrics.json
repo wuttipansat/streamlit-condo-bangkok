@@ -1,61 +1,59 @@
 {
     "best_model": "VotingRegressor",
-    "best_r2": 0.9133900028493616,
+    "best_r2": 0.8805187786148747,
     "all_models": {
         "Linear Regression": {
-            "mae": 5385.920600481925,
-            "rmse": 13278.852571355466,
-            "r2": 0.8493424941796148
+            "mae": 5383.410590535852,
+            "rmse": 12202.8803954899,
+            "r2": 0.8563511155037385
         },
         "Ridge Regression": {
-            "mae": 5466.437973505369,
-            "rmse": 14030.833676964923,
-            "r2": 0.8317958805072639
+            "mae": 5360.130312263812,
+            "rmse": 12059.02397477238,
+            "r2": 0.8597180268844156
         },
         "Lasso Regression": {
-            "mae": 5460.315947954076,
-            "rmse": 14005.005066348105,
-            "r2": 0.8324145864298504
+            "mae": 5370.010466118524,
+            "rmse": 11983.339882022883,
+            "r2": 0.8614733590992277
         },
         "Decision Tree": {
-            "mae": 6511.379583188909,
-            "rmse": 20360.32043057688,
-            "r2": 0.6458078821459855
+            "mae": 5536.570280020819,
+            "rmse": 16149.47783587358,
+            "r2": 0.7484093378556016
         },
         "Random Forest": {
-            "mae": 4637.176253157725,
-            "rmse": 11321.848845215702,
-            "r2": 0.890477239938309
+            "mae": 4872.138933259996,
+            "rmse": 11265.43243786447,
+            "r2": 0.8775741062425808
         },
         "Gradient Boosting": {
-            "mae": 7084.889667748826,
-            "rmse": 13580.777003427276,
-            "r2": 0.8424135358111835
+            "mae": 7159.171997904883,
+            "rmse": 13278.654735792323,
+            "r2": 0.8299072878393858
         },
         "SVR": {
-            "mae": 4851.815746722526,
-            "rmse": 10649.215293158519,
-            "r2": 0.9031042141548309
+            "mae": 5493.2817244688185,
+            "rmse": 12282.063526652477,
+            "r2": 0.8544808238600861
         },
         "KNN": {
-            "mae": 7684.833920885931,
-            "rmse": 15364.210581776631,
-            "r2": 0.7983073013454443
+            "mae": 8041.935333826412,
+            "rmse": 16856.620572713586,
+            "r2": 0.7258939815632657
         },
         "VotingRegressor": {
-            "mae": 4516.8965108071625,
-            "rmse": 10068.138349222274,
-            "r2": 0.9133900028493616
+            "mae": 4863.36304782587,
+            "rmse": 11129.125822846896,
+            "r2": 0.8805187786148747
         }
     },
     "data_shape": {
-        "rows": 5771,
-        "columns": 13
+        "rows": 5524,
+        "columns": 11
     },
     "features": [
         "poster_status",
-        "no_bedroom",
-        "floor",
         "room_size",
         "unit_type",
         "project_name_grouped",
@@ -73,63 +71,28 @@
         "top_features": [
             {
                 "feature": "room_size",
-                "importance_mean": 1.0398,
-                "importance_std": 0.0324
+                "importance_mean": 0.9112,
+                "importance_std": 0.0569
             },
             {
                 "feature": "project_name_grouped",
-                "importance_mean": 0.3051,
-                "importance_std": 0.0232
-            },
-            {
-                "feature": "no_bedroom",
-                "importance_mean": 0.08,
-                "importance_std": 0.0142
-            },
-            {
-                "feature": "amenity_count",
-                "importance_mean": 0.0354,
-                "importance_std": 0.0139
-            },
-            {
-                "feature": "is_popular_project",
-                "importance_mean": 0.0281,
-                "importance_std": 0.0107
+                "importance_mean": 0.3592,
+                "importance_std": 0.0345
             },
             {
                 "feature": "room_size_group",
-                "importance_mean": 0.0248,
-                "importance_std": 0.0021
+                "importance_mean": 0.0771,
+                "importance_std": 0.0047
+            },
+            {
+                "feature": "is_popular_project",
+                "importance_mean": 0.0283,
+                "importance_std": 0.0052
             },
             {
                 "feature": "move_in_ready",
-                "importance_mean": 0.0223,
-                "importance_std": 0.0134
-            },
-            {
-                "feature": "floor",
-                "importance_mean": 0.0183,
-                "importance_std": 0.0082
-            },
-            {
-                "feature": "kitchen_ready",
-                "importance_mean": 0.0179,
-                "importance_std": 0.0073
-            },
-            {
-                "feature": "unit_type",
-                "importance_mean": 0.0134,
-                "importance_std": 0.003
-            },
-            {
-                "feature": "comfort_score",
-                "importance_mean": 0.0102,
-                "importance_std": 0.0077
-            },
-            {
-                "feature": "poster_status",
-                "importance_mean": 0.0059,
-                "importance_std": 0.0044
+                "importance_mean": 0.0075,
+                "importance_std": 0.0025
             }
         ]
     }

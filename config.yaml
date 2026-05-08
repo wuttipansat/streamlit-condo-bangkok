@@ -9,8 +9,8 @@ columns:
   selected:
     - poster_status
     - rental
-    - no_bedroom
-    - floor
+    # - no_bedroom
+    # - floor
     - room_size
     - unit_type
     - project_name

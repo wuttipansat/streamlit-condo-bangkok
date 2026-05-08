@@ -7,8 +7,8 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 def get_feature_columns():
     numeric_features = [
-        "no_bedroom",
-        "floor",
+        # "no_bedroom",
+        # "floor",
         "room_size",
         "amenity_count",
         "kitchen_ready",
